@@ -16,7 +16,7 @@
 //    private static GraphQLSchema buildSchema() {
 //        GreetingRepository greetingRepository = new GreetingRepository();
 //        return SchemaParser.newParser()
-//                .file("greeting.graphqls")
+//                .file("greeting.graphqlss")
 //                .resolvers(new Query(greetingRepository))
 //                .build()
 //                .makeExecutableSchema();
