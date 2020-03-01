@@ -1,0 +1,60 @@
+Open Desktop app for GraphQL Playground
+=======================================
+
+http://localhost:8080/graphql
+
+=======
+#### 1.
+=======
+	mutation {
+	  newGreeting(message: "vinod") {
+	    id
+	    message
+	  }
+	}
+
+
+Output:
+-------
+{
+  "data": {
+    "newGreeting": {
+      "id": "82d77cce-54a8-4177-8791-b4525a1b1cf4",
+      "message": "vinod"
+    }
+  }
+}
+
+
+
+======
+### 2.
+======
+	{
+	  getAllGreetings{
+	    id
+	    message
+	  }
+	}	
+
+
+Output:
+-------
+{
+  "data": {
+    "getAllGreetings": [
+      {
+        "id": "26041b5b-692d-4dde-96b4-42048b7e7d18",
+        "message": "sudhir"
+      },
+      {
+        "id": "0b175ab7-8b82-47d6-91ba-078bbfe0eff5",
+        "message": "sharada"
+      },
+      {
+        "id": "82d77cce-54a8-4177-8791-b4525a1b1cf4",
+        "message": "vinod"
+      }
+    ]
+  }
+}
