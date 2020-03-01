@@ -58,3 +58,21 @@ Output:
     ]
   }
 }
+
+
+======
+### 3.
+======
+subscription {
+  greetings {
+    message
+    authorName
+  }
+}
+
+
+Output:
+-------
+{
+  "error": "Could not connect to websocket endpoint ws://localhost:8080/graphql. Please check if the endpoint url is correct."
+}

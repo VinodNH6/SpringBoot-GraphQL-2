@@ -1,7 +1,9 @@
-type Greeting {
-  id: ID!
-  message: String!
+schema {
+    query: Query,
+    mutation: Mutation
+    subscription : Subscription
 }
+
 
 type Query {
   getGreeting(id: ID!): Greeting
@@ -11,3 +13,20 @@ type Query {
 type Mutation {
   newGreeting(message: String!): Greeting!
 }
+
+type Subscription {
+    # Subscribe to all new comments
+    greetings: GreetingUpdate!
+}
+
+type Greeting {
+  id: ID!
+  message: String!
+}
+
+type GreetingUpdate {
+    message : String
+    authorName : String
+    createdOn : String
+}
+
